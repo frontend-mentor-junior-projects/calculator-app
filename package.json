@@ -12,7 +12,9 @@
 		"test": "vitest",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
-		"test-storybook": "test-storybook"
+		"test-storybook": "test-storybook",
+		"cypress": "npx cypress open",
+		"test-cypress": "npm run dev && npx cypress open"
 	},
 	"dependencies": {
 		"@storybook/addon-a11y": "^7.0.9",
@@ -39,6 +41,7 @@
 		"@vitejs/plugin-react": "^4.0.0",
 		"autoprefixer": "^10.4.14",
 		"commitizen": "^4.3.0",
+		"cypress": "^12.11.0",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.2.0",
 		"eslint-config-airbnb": "^19.0.4",
