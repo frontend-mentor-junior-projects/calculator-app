@@ -1,5 +1,8 @@
 import type { Preview } from '@storybook/react'
+import React from 'react'
 import 'tailwindcss/tailwind.css'
+
+import { ThemeProvider } from '../src/context/ThemeContext'
 
 const CUSTOM_VIEWPORTS = {
 	mobile375: {
@@ -50,15 +53,15 @@ const preview: Preview = {
 		// layout: 'fullscreen',
 	},
 	// Decorators.
-	// decorators: [
-	// 	(Story) => {
-	// 		return (
-	// 			<div>
-	// 				<Story />
-	// 			</div>
-	// 		)
-	// 	},
-	// ],
+	decorators: [
+		(Story) => {
+			return (
+				<ThemeProvider>
+					<Story />
+				</ThemeProvider>
+			)
+		},
+	],
 }
 
 export default preview

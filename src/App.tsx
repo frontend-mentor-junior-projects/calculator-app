@@ -1,8 +1,11 @@
+import Main from 'components/Main'
+import { ThemeProvider } from 'context/ThemeContext'
+
 function App() {
 	return (
-		<main>
-			<h1>Calculator App</h1>
-		</main>
+		<ThemeProvider>
+			<Main />
+		</ThemeProvider>
 	)
 }
 
